@@ -1,0 +1,80 @@
+<!--pages/primary/remind/remind.wxml-->
+<view class="main">
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="tab1" title="我关注的交易"></i-tab>
+    <i-tab key="tab2" title="我发布的交易"></i-tab>
+</i-tabs>
+
+<view wx:if="{{current=='tab1'}}">
+  <!-- <van-card num="2" price="2.00" desc="描述信息" title="商品标题" thumb-link link-type />
+  <i-panel i-class="part">
+    <i-swipeout  wx:for="{{myFocusBook}}" i-class="swipeout" operateWidth="{{120}}">
+        <view slot="content">
+            <view class="text">{{item.bookName}}（出售者：{{item.sellerName}}）</view>
+        </view>
+        <view slot="button" class="button-group">
+            <view class="but2" style="width:60px" bindtap="chat" data-id_tar="{{item.sellerId}}" data-id_me="{{item.buyerId}}"> <i-icon size="32" type="interactive" class="icon" color="white"></i-icon></view>
+            <view class="but3" style="width:60px" bindtap="del" data-id_pro="{{item.id}}"> <i-icon size="32" type="delete" class="icon" color="white"></i-icon></view>
+        </view>
+    </i-swipeout>
+  </i-panel> -->
+  <i-panel title="我关注的交易：" i-class="part">
+  <view wx:for="{{myFocusBook}}" >
+  <view class="show1">
+    <image src="{{item.pic}}"/>
+    <i-swipeout  i-class="swipeout" operateWidth="{{120}}">
+        <view slot="content">
+            <view class="text">{{item.bookName}}（出售者：{{item.sellerName}}）</view>
+        </view>
+        <view slot="button" class="button-group">
+            <view class="but2" style="width:60px" bindtap="chat" data-id_tar="{{item.sellerId}}" data-id_me="{{item.buyerId}}" data-name="{{item.sellerName}}" data-avatar="{{item.avatar}}"> <i-icon size="32" type="interactive" class="icon" color="white"></i-icon></view>
+            <view class="but3" style="width:60px" bindtap="del" data-id_pro="{{item.id}}"> <i-icon size="32" type="delete" class="icon" color="white"></i-icon></view>
+            </view>
+    </i-swipeout>
+    </view>
+    </view>
+</i-panel>
+</view>
+
+<view wx:if="{{current=='tab2'}}">
+  
+  <!-- <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+    <van-card num="2" price="2.00" desc="描述信息" title="商品标题" thumb="/images/test/2.png" thumb-link link-type />
+    <view slot="right">删除</view>
+  </van-swipe-cell> -->
+<i-panel title="我发布的交易：" i-class="part">
+  <!-- <view wx:for="{{myBook}}" class="listele"> -->
+  <view wx:for="{{myBook}}">
+  <view class="show1">
+  <image src="{{item.link}}"/>
+    <i-swipeout  i-class="swipeout" operateWidth="{{60}}">
+        <view slot="content">
+            <view class="text">{{item.bookName}}</view>
+        </view>
+        <view slot="button" class="button-group">
+            <view class="but3" style="width:60px" bindtap="del2" data-id_pro="{{item.id}}"> <i-icon size="32" type="delete" class="icon" color="white"></i-icon></view>
+        </view>
+    </i-swipeout>
+  </view>
+    <!-- 此处为内层循环 -->
+    <!-- <i-collapse-item title="感兴趣的人：" name="name1">
+      <view wx:for="{{myBookDetail}}" wx:for-item="cell" slot="content"> -->
+        <!-- 物品id符合即可 -->
+        <!-- <i-swipeout wx:if="{{cell.id==item.id}}" i-class="swipeout" operateWidth="{{60}}"  >
+            <view slot="content">
+                <view class="text">{{cell.buyerName}}</view>
+            </view>
+            <view slot="button" class="button-group"> -->
+            <!-- 这里传id的设计还有待商榷 -->
+            <!-- <view class="but2" style="width:60px" bindtap="chat"data-id_tar="{{item.sellerId}}" data-id_me="{{item.buyerId}}" data-name="{{item.sellerName}}" data-avatar="{{item.avatar}}"> <i-icon size="32" type="interactive" class="icon" color="white"></i-icon></view>
+            </view>
+        </i-swipeout>
+      </view>
+    </i-collapse-item> -->
+    <!-- 此处为内层循环 -->
+  </view>
+  </i-panel>
+</view>
+
+<i-button type="primary" bind:click="refreash" shape="circle">刷新</i-button>
+</view>

@@ -1,0 +1,39 @@
+<view class="main">
+  <i-cell class="section"  title="品类:">
+    <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{tempt}}">
+    <view class="picker">{{tempt[index]}}</view>
+    </picker>
+  </i-cell>
+  <i-panel title="基础信息：">
+    <view wx:if="{{index==0}}">
+      <i-input title="书名" autofocus placeholder="请输入书名" maxlength="50" bind:change="bookName"/>
+      <i-input title="课程" placeholder="请输入本教材所属的课程" maxlength="50" bind:change="bookCourse"/>
+    </view>
+    <view wx:if="{{index!=0}}">
+      <i-input title="名称" autofocus placeholder="请输入物品名称" maxlength="50" bind:change="bookName"/>
+    </view>
+      <i-input value="{{ value2 }}" type="number" title="新旧程度" placeholder="1-10" maxlength="50" bind:change="damage"/>
+      <i-input title="备注" placeholder="请输入备注" maxlength="50" bind:change="bookNote"/>
+      <view class="price">
+        <i-input type="number" title="价格" placeholder="输入价格，点击右侧预测" maxlength="50" bind:change="bookPrice"/>
+        <i-icon type="coupons" size="30" bindtap="predict" color="white" />
+      </view>
+  </i-panel>
+
+  <view class="posi">
+    <i-radio-group current="{{pos[current].name}}" bindchange="handlePosChange">
+      <label class="checkbox" wx:for="{{pos}}">
+       <i-radio position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}">
+        </i-radio>
+      </label>
+    </i-radio-group>
+  </view>
+
+  <i-panel title="添加图片：">
+      <i-cell title="拍照或访问相册" is-link bind:click="onChooseImg"></i-cell>
+      <view class="img"><image src="{{localImgLink}}" style="width: 180px; height: 200px; background-color: #eeeeee;"></image></view>
+  </i-panel>
+
+  <i-button type="primary" bind:click="onClick" shape="circle">提交</i-button>
+
+</view>

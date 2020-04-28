@@ -1,0 +1,61 @@
+/* pages/primary/publish/publish.wxss */
+.price {
+  display: flex;
+  flex-direction: row;
+}
+
+.img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img image{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.main{
+  margin:5%;
+  margin-bottom: 200rpx;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #5cadff;
+  border-radius: 5px;
+  align-items: center;
+}
+.price i-input{
+  width:85%;
+}
+.price i-icon{
+  margin:6px;
+}
+.posi {
+  display: flex;
+  justify-content: center;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.chooseImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox {
+  display: inline-block;
+}

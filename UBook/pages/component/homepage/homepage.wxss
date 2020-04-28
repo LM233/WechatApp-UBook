@@ -1,0 +1,116 @@
+/* pages/primary/homepage/homepage.wxss */
+
+page {
+  background-color:white;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main image{
+  width:280px;
+  height:410px;
+  margin-top: 10%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.main1 image{
+  width:312px;
+  height:165px;
+  border:#5cadff 2px solid;
+  border-radius: 5px;
+  margin:2px;
+  margin-bottom: 5px;
+}
+.search0 {
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  background-color: #5cadff;
+  margin: 1%;
+  border:#5cadff 1.5px solid;
+  border-radius: 5px;
+  position:relative;
+}
+
+.search1 {
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  background-color: #5cadff;
+  margin: 1%;
+  border:#5cadff 1.5px solid;
+  border-radius: 5px;
+}
+.search0 i-icon{
+  margin:2%;
+}
+.search1 i-icon{
+  margin:2%;
+}
+.search0 i-input{
+  width:90%;
+  border-radius: 6px;
+}
+.search1 i-input{
+  width:86%;
+  border-radius: 6px;
+}
+.page{
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  width:100%;
+  display: column;
+  flex-direction: row;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.rowline {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+.object {
+  display: flex;
+  flex-direction: column;
+  height: 300rpx;
+  width: 300rpx;
+  border-radius: 30rpx;
+  margin-left: 50rpx;
+  background-color: #f8f8f9;
+}
+
+.object .pic {
+  border-radius: 30rpx;
+}
+
+.show {
+  display: flex;
+  flex-direction: row;
+  width: 180rpx;
+  height:1200rpx;
+  background-color: #f8f8f9;
+}
+
+.detail {
+  margin-left: 10rpx; 
+  width:100%;
+}
+.detail .detail-cell{
+  width:500rpx;
+}

@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-button": "/dist/button/index",
+    "van-cell": "/dist_1/cell/index",
+    "van-cell-group": "/dist_1/cell-group/index",
+    "van-divider": "/dist_1/divider/index",
+    "van-popup": "/dist_1/popup/index",
+    "van-field": "/dist_1/field/index",
+    "van-button": "/dist_1/button/index"
+  }
+}

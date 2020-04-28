@@ -1,0 +1,40 @@
+<!--pages/component/homepage/result/result.wxml-->
+
+<view class="main">
+
+  <view class="bar">
+    <view class="input">
+      <van-search value="{{ value }}" shape="round" background="#5cadff" placeholder="请输入搜索关键词" bind:search="onSearch"      
+      bind:cancel="onCancel"/>
+      <!-- <van-cell-group>
+      <van-field value="{{ value }}" placeholder="请输入"
+    border="{{ true }}" bind:change="onChange" type="text" size clickable maxlength="20"/>
+      </van-cell-group>
+      <van-icon name="search" size="30" color="white"/> -->
+    </view>
+    <van-icon name="shopping-cart-o" size="30" color="white" bind:click="oncart"/>
+  </view>
+
+  <view class="result">
+    <van-dropdown-menu>
+    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="changeCondition" data-cata="a"/>
+    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="changeCondition" data-cata="b"/>
+    <van-dropdown-item value="{{ value3 }}" options="{{ option3 }}" bind:change="changeCondition" data-cata="c"/>
+    </van-dropdown-menu>
+
+  </view>
+
+  <!-- 第二批要展示的东西 -->
+<view wx:for="{{[0,1,2,3,4]}}" i-class="detail-cell">
+  <view class="book" class="jomo" catchtap="ondetail" data-product="{{bookData[item+page*5]}}">
+    <van-card wx:if="{{bookData[item+page*5]}}" num="1" price="{{bookData[item+page*5].bookPrice}}" desc="{{bookData[item+page*5].seller}}" title="{{bookData[item+page*5].bookName}}" thumb="{{bookData[item+page*5].link}}"/>
+  </view>
+</view>
+  <view wx:if="{{mode==2}}" class="main1">
+    <image src="/images/test/temp1.png"></image>
+  </view>
+</view>
+<view class="buttons" wx:if="{{mode!=2}}">
+  <van-button round color="#5cadff" plain bindtap="previous">上一页</van-button>
+  <van-button round color="#5cadff" plain bindtap="next">下一页</van-button>
+</view>

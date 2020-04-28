@@ -1,0 +1,16 @@
+<view class="container">
+  <image class="image" src="/images/src/book.png"></image>
+  <image class="title" src="/images/src/title.png"></image>
+  <view class="login">
+    <view class="account">
+      <i-input class="input" title="学号:" type="number" mode="normal" maxlength="100" bind:change="number"></i-input>
+    </view>
+    <view class="password">
+      <i-input class="input" title="密码:" type="password" maxlength="100" bind:change="code"></i-input>
+    </view>
+  </view>
+  <view class="sign">
+      <i-button class="signin" shape="circle" type="ghost" long="true" catchtap="onPage"><text class="text">登录</text></i-button>
+      <i-button class="signup" shape="circle" type="ghost" long="true" catchtap="onregister"><text class="text">注册</text></i-button>
+  </view>
+</view>

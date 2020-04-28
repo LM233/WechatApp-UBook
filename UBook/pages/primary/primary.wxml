@@ -1,0 +1,27 @@
+<!-- pages/primary/primary.wxml-->
+  
+  <view hidden="{{current == 'homepage' ? false : true}}">
+    <component_home/>
+  </view>
+  <view hidden="{{current == 'chat' ? false : true}}">
+    <component_chat/>
+  </view>
+  <view hidden="{{current == 'publish' ? false : true}}">
+    <component_pub/>
+  </view>
+  <view hidden="{{current == 'remind' ? false : true}}">
+    <component_remind/>
+  </view>
+  <view hidden="{{current == 'mine' ? false : true}}">
+    <component_mine/>
+  </view>
+  
+  <view class="bar">
+    <i-tab-bar current="{{ current }}" bindchange="handleChange" color="#5cadff">
+      <i-tab-bar-item key="homepage" icon="search" current-icon="searchfill" title="搜索" ></i-tab-bar-item>
+      <i-tab-bar-item key="chat" icon="interactive" current-icon="interactive_fill" title="聊天" ></i-tab-bar-item>
+      <i-tab-bar-item key="publish" icon="add" current-icon="close" title="发布"></i-tab-bar-item>
+      <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill"title="交易"></i-tab-bar-item>
+      <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>

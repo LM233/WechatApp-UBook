@@ -1,0 +1,33 @@
+<!--pages/component/mine/information/information.wxml-->
+  <view class="card" wx:if="{{mode==0}}">
+    <i-card title="个人信息" thumb="{{userInfo.avatarUrl}}" extra="{{userInfo.nickName}}">
+      <view slot="content">姓名:{{userData.name}}</view>
+      <view slot="content">学号:{{userData.number}}</view>
+      <view slot="content">专业:{{userData.school}}</view>
+      <view slot="content">性别:{{userData.sex}}</view>
+      <view slot="footer">更多INFO可按照数据库添加</view>  
+    </i-card>
+      <i-button bind:click="onClick" class="check" type="primary" catchtap="information">修改资料</i-button>
+  </view>
+  <view class="container" wx:if="{{mode==1}}">
+    <i-input class="name" title="姓名" placeholder="请输入你的名字" bind:change="name" maxlength="100" value="{{name}}"></i-input>
+    <i-input class="passward" title="密码" type="password" placeholder="请输入6-16位密码" bind:change="code" maxlength="100" value="{{code}}"></i-input>
+    <i-input class="passward" title="重复密码" placeholder="请再次输入密码" type="password" bind:change="reCode" maxlength="100" value="{{reCode}}"></i-input>
+    <i-panel title="性别">
+      <i-radio-group current="{{current}}" bindchange="onBoxChange">
+          <label class="checkbox" wx:for="{{gender}}">
+            <i-radio value="{{item.name}}" wx:key="{{item.id}}">
+            </i-radio>
+          </label>
+      </i-radio-group>
+    </i-panel>
+
+    <view class="section">
+      <view class="tag">学院：</view>
+      <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{tempt}}">
+      <view class="picker">{{tempt[index]}}</view>
+      </picker>
+    </view>
+
+    <i-button type="primary" shape="circle" bind:click="changeData">修改信息</i-button>
+  </view>

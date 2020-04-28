@@ -1,0 +1,17 @@
+<!--pages/component/homepage/class/class.wxml-->
+
+<view class="show">
+  <view>
+    <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+      <van-sidebar-item wx:for="{{category}}" title="{{item.name}}" />
+    </van-sidebar>
+  </view>
+  
+  <view class="detail" gutter="{{ 30 }}">
+    <van-grid column-num="2">
+      <van-grid-item wx:for="{{category[activeKey].class}}" icon="{{item.image}}" text="{{item.type}}" 
+      url link-type/>
+    </van-grid>
+  </view>
+  
+</view>

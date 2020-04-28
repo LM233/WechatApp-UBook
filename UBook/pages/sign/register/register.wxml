@@ -1,0 +1,25 @@
+<!--pages/sign/register/register.wxml-->
+<view class="main">
+  <i-panel>
+  <i-input class="nickname" title="用户名" type="text" placeholder="请输入用户名" bind:change="" maxlength="100"></i-input>
+  <i-input class="studentid" title="学号" type="number" placeholder="请输入10位学号" bind:change="number" maxlength="100"></i-input>
+  <i-input class="name" title="姓名" placeholder="请输入你的名字" bind:change="name" maxlength="100"></i-input>
+  <i-input class="passward" title="密码" type="password" placeholder="请输入6-16位密码" bind:change="code" maxlength="100"></i-input>
+  <i-input class="passward" title="重复密码" placeholder="请再次输入密码" type="password" bind:change="reCode" maxlength="100"></i-input>
+  <i-cell title="性别:">
+    <i-radio-group current="{{gender[current].name}}" bindchange="onBoxChange">
+        <label class="checkbox" wx:for="{{gender}}">
+          <i-radio value="{{item.name}}" wx:key="{{item.id}}">
+          </i-radio>
+        </label>
+    </i-radio-group>
+  </i-cell>
+  <i-cell class="section"  title="学院:">
+    <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{tempt}}">
+    <view class="picker">{{tempt[index]}}</view>
+    </picker>
+  </i-cell>
+  </i-panel>
+
+  <i-button type="primary" shape="circle" bind:click="onClick">注册</i-button>
+</view>

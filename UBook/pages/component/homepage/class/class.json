@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-sidebar": "/dist_1/sidebar/index",
+    "van-sidebar-item": "/dist_1/sidebar-item/index",
+    "van-grid": "/dist_1/grid/index",
+    "van-grid-item": "/dist_1/grid-item/index",
+    "van-icon": "/dist_1/icon/index"
+  }
+}

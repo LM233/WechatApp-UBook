@@ -1,0 +1,11 @@
+/* pages/component/homepage/class/class.wxss */
+
+.show {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.detail {
+  margin-left: 10rpx; 
+}

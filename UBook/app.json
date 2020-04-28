@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/sign/sign",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sign/register/register",
+    "pages/primary/primary",
+    "pages/detail/detail",
+    "pages/component/homepage/homepage",
+    "pages/component/homepage/result/result",
+    "pages/component/homepage/class/class",
+    "pages/component/publish/publish",
+    "pages/component/remind/remind",
+    "pages/component/mine/mine",
+    "pages/component/mine/information/information",
+    "pages/component/roomList/roomList",
+    "pages/chatroom/chatroom"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5cadff",
+    "navigationBarTitleText": "UBook",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+
+}

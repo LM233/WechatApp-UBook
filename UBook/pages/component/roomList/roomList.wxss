@@ -1,0 +1,68 @@
+/* pages/component/roomList/roomList.wxss */
+
+.title {
+  height: 50px;
+  width: 100%;
+  border: 1px #dddee1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f9;
+}
+
+.chat {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  border: 1px #dddee1;
+}
+
+.chat image {
+  height: 125rpx;
+  width: 125rpx;
+  border-radius: 5%; 
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.text-wrapper .object{
+  margin-top: 5px;
+}
+
+.text-wrapper .content{
+  margin-top: 5px;
+  font-size: 13px;
+  color: #80848f;
+}
+.button-group{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height:100%;
+}
+.but{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ed3f14;
+  height:100%;
+}
+.icon{
+  margin-top: 35%;
+}
+.show{
+  display: flex;
+  flex-direction: row;
+}
+.text{
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+}
+.swipeput{
+  background-color: #f8f8f9;
+}

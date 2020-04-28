@@ -1,0 +1,13 @@
+<!--pages/component/roomList/roomList.wxml-->
+<i-swipeout  wx:for="{{userList}}" i-class="swipeout" operateWidth="{{60}}" >
+    <van-divider />
+    <view slot="content" class="show" bindtap="onTap" data-id="{{item.id}}">
+        <image src="{{item.avatar}}" style="height:100rpx; width:100rpx;"></image>
+        <van-tag round type="danger" wx:if="{{item.number}}">{{item.number}}</van-tag>
+        <view class="text">{{item.name}}</view>
+    </view>
+    <view slot="button" class="button-group">
+        <view class="but" style="width:60px" bindtap="del" data-id_pro="{{item.id}}"> <i-icon size="32" type="delete" class="icon" color="white"></i-icon></view>
+    </view>
+</i-swipeout>
+<!-- <i-button type="primary" bind:click="refresh" shape="circle">刷新</i-button> -->

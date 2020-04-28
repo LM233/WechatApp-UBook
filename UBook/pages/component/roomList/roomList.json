@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "i-panel": "../../dist/panel/index",
+    "i-card": "../../dist/card/index",
+    "i-tabs": "/dist/tabs/index",
+    "i-icon": "/dist/icon/index",
+    "i-button": "/dist/button/index",
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-swipeout": "/dist/swipeout/index",
+    "i-collapse": "../../dist/collapse/index",
+    "i-collapse-item": "../../dist/collapse-item/index",
+    "van-divider": "/dist_1/divider/index",
+    "van-tag": "/dist_1/tag/index"
+  }
+}

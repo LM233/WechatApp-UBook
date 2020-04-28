@@ -1,0 +1,64 @@
+<!--pages/component/remind/chatroom/chatroom.wxml-->
+<view class="chatroom">
+  <!-- 聊天记录 -->
+  <scroll-view scroll-y class="body">
+    <view wx:for="{{chats}}" wx:key="{{item._id}}" class="message {{openId == item._openid ? 'message__self' : ''}}">
+      <view class="user">
+          <view class="nickname">{{item.nickName}}</view>
+          <image class="avatar" src="{{item.avatar}}" mode="scaleToFill"></image>
+      </view>
+      <view class="main">
+          <view class="text-content" wx:if="{{item.textContent}}">{{item.textContent}}</view>
+          <view class="pic" wx:if="{{item.imageContent}}">
+            <image class="image" src="{{item.imageContent}}" mode="aspectFit" bindtap="checkImage" data-src="{{item.imageContent}}" ></image>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <view class="input-box">
+  
+    <view class="send-msg-box">
+      <view class="input-item">
+        <input class="input keyboard-input" placeholder="请输入" value="{{textInputValue}}" bindinput="onTextInput"></input>
+      </view>
+      <i-icon class="comment-icon add-icon" catchtap="sendMoreMsg" type="add" size="28" />
+      <button size="mini" class="submit-btn" bindtap="onSend">发送</button>
+    </view>
+
+
+    <view class="send-more-box" hidden="{{!sendMoreMsgFlag}}">
+
+      <!--选择图片和拍照的按钮-->
+      <view class="send-more-btns-main">
+        <view class="more-btn-item" catchtap="chooseImage" data-category="album">
+          <view class="more-btn-main">
+            <i-icon type="picture" size="30" />
+          </view>
+          <text>照片</text>
+        </view>
+        <view class="more-btn-item" catchtap="chooseImage" data-category="camera">
+          <view class="more-btn-main">
+            <i-icon type="camera" size="30" />
+          </view>
+          <text>拍照</text>
+        </view>
+      </view>
+
+      <!--显示选择的图片-->
+      <view class="send-more-result-main" hidden="{{chooseFiles.length==0}}">
+        <block wx:for="{{chooseFiles}}" wx:for-index="idx">
+
+          <!--如果删除其中一个，则对其添加deleting 样式；-->
+          <view class="file-box {{deleteIndex==idx?'deleting':''}}">
+            <view class="img-box">
+              <image src="{{item}}" mode="aspectFill" catchtap="previewImg" data-idx="{{idx}}"></image>
+              <icon class="remove-icon" type="cancel" size="23" color="#B2B2B2" catchtap="deleteImage" data-idx="{{idx}}" />
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+</view>

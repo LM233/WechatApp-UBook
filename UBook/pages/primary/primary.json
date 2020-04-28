@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "i-button": "../../../dist/button/index",
+    "i-input": "../../../dist/input/index",
+    "i-icon": "../../dist/icon/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "component_home": "/pages/component/homepage/homepage",
+    "component_pub": "/pages/component/publish/publish",
+    "component_remind": "/pages/component/remind/remind",
+    "component_mine": "/pages/component/mine/mine",
+    "component_chat": "/pages/component/roomList/roomList"
+  }
+
+}

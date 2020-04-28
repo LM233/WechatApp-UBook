@@ -1,0 +1,260 @@
+/* pages/component/remind/chatroom/chatroom.wxss */
+
+.chatroom {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatroom .body {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: rgb(237, 237, 237);
+  padding-bottom: 100rpx;
+}
+
+.body .message {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 12rpx 0;
+}
+
+.body .message.message__self {
+  flex-direction: row-reverse;
+}
+
+.body .message .user {
+  display: flex;
+  flex-direction: column;
+}
+
+.body .message .avatar {
+  position: relative;
+  top: 5rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 5rpx;
+  margin: 15rpx;
+}
+
+.body .message .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 80%;
+}
+
+.body .message.message__self .main {
+  align-items: flex-end;
+}
+
+.body .message .nickname {
+  font-size: 24rpx;
+  color: #444;
+}
+
+.body .message .text-content {
+  border-radius: 6rpx;
+  background-color: #fff;
+  margin: 20px 0 0 0;
+  padding: 4px 10px;
+  font-size: 32rpx;
+  position: relative;
+}
+
+.body .message.message__self .text-content {
+  background-color: #0081ff;
+  color: #fff;
+}
+
+.body .message.message__self .text-wrapper .loading {
+  font-size: 16rpx;
+  margin-right: 18rpx;
+}
+
+.body .message .image-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.body .message .image-content {
+  max-width: 240rpx;
+  max-height: 240rpx;
+}
+
+.body .message.message__self .image-wrapper .loading {
+  font-size: 20rpx;
+  margin-right: 18rpx;
+}
+
+.input-box{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background-color: #EAE8E8;
+    border-top:1rpx solid #D5D5D5;
+    min-height: 100rpx;
+    z-index: 1000;
+}
+.input-box .send-msg-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 20rpx 0;
+}
+.input-box .send-more-box{
+    margin: 20rpx 35rpx 35rpx 35rpx;
+}
+.input-box .input-item{
+    margin:0 5rpx;
+    flex:1;
+    width: 0%;
+    position: relative;
+}
+.input-box .input-item .comment-icon{
+    position: absolute;
+    left:5rpx;
+    top:6rpx;
+}
+
+.input-box .input-item .input{
+    border: 1rpx solid #D5D5D5;
+    background-color: #fff;
+    border-radius: 3px;
+    line-height: 65rpx;
+    margin:5rpx 0 5rpx 5rpx ;
+    font-size: 24rpx;
+    color: #838383;
+    padding: 0 2%;
+}
+.input-box .input-item .keyboard-input{
+    width: auto;
+    max-height: 500rpx;
+    height: 65rpx;
+    word-break:break-all;
+    overflow:auto;
+}
+.input-box .input-item .speak-input{
+    text-align: center;
+    color: #212121;
+    height: 65rpx;
+}
+
+.input-box .input-item .recoding{
+    background-color: #ccc;
+}
+
+.input-box .input-item .comment-icon.speak-icon{
+    height: 62rpx;
+    width: 62rpx;
+}
+.input-box .input-item .comment-icon.keyboard-icon{
+    height: 60rpx;
+    width: 60rpx;
+    left:6rpx;
+}
+.input-box .add-icon{
+    margin:0 5rpx;
+    height: 65rpx;
+    width: 65rpx;
+    transform: scale(0.9);
+    margin-top: 2px;
+}
+.input-box .submit-btn{
+    font-size: 24rpx;
+    margin-top: 5rpx;
+    margin-right: 8rpx;
+    line-height: 60rpx;
+    width: 120rpx;
+    height: 60rpx;
+    background-color: #5cadff;
+    border-radius:5rpx;
+    color: #fff;
+    text-align: center;
+    font-family:Microsoft Yahei;
+}
+
+
+.send-more-box .more-btn-item{
+    display: inline-block;
+    width: 110rpx;
+    height: 145rpx;
+    margin-right: 35rpx;
+    text-align: center;
+}
+
+.more-btn-main{
+    width: 100%;
+    height:60rpx;
+    text-align: center;
+    border:1px solid #D5D5D5;
+    border-radius: 10rpx;
+    background-color: #fbfbfc;
+    margin: 0 auto;
+    padding:25rpx 0
+}
+.more-btn-main image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.send-more-box .more-btn-item .btn-txt{
+    color: #888888;
+    font-size: 24rpx;
+    margin:10rpx 0;
+}
+
+.send-more-result-main{
+    margin-top: 30rpx;
+}
+.send-more-result-main .file-box{
+    margin-right: 14rpx;
+    height: 160rpx;
+    width: 160rpx;
+    position: relative;
+    display: inline-block;
+}
+
+.send-more-result-main .file-box.deleting{
+    animation:deleting 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes deleting {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+.send-more-result-main image{
+    height: 100%;
+    width: 100%;
+}
+.send-more-result-main .remove-icon{
+    position: absolute;
+    right: 5rpx;
+    top: 5rpx;
+}
+
+.send-more-result-main .file-box .img-box {
+    height: 100%;
+    width: 100%;
+}
+
+.pic .image {
+  height: 100px;
+  width: 100px;
+  border-radius: 10%;
+}

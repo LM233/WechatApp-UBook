@@ -1,0 +1,38 @@
+<!--pages/primary/homepage/homepage.wxml-->
+<view class="page">
+
+  <view wx:if="{{mode==0}}" class="main">
+  </view>
+
+  <!-- 第一批要展示的东西 -->
+  <view wx:if="{{mode==0}}" class="search0">
+    <i-input placeholder="搜索书籍" shape="circle" maxlength="100" bind:change="bookName" value="{{input}}"></i-input>
+    <i-icon type="search" size="30" bindtap="search" color="white" />
+  </view>
+  <view class="panel" wx:if="{{mode==0}}">
+    <!-- <view class="rowline">
+      <view class="object">
+        <image class="pic" style="width: 100%; height: 90px;" src="/images/test/1.png" />
+        <text>标题</text>
+      </view>
+      <view class="object">
+        <image class="pic" style="width: 100%; height: 90px;" src="/images/test/2.png" />
+        <text>标题</text>
+      </view>
+    </view> -->
+    <view class="show">
+      <view>
+        <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+          <van-sidebar-item wx:for="{{category}}" title="{{item.name}}" />
+        </van-sidebar>
+      </view>
+      <view class="detail" gutter="{{ 30 }}">
+        <i-cell wx:for="{{category[activeKey].items}}" wx:key="id" i-class="detail-cell" bindtap="onTap" data-product="{{item}}">
+        <i-card title="{{item.bookName}}"  thumb="{{item.link}}" full="true">
+          <view slot="content">出售者：{{item.seller}}</view>
+        </i-card>
+      </i-cell>
+      </view>
+    </view>
+  </view>
+</view>

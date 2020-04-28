@@ -1,0 +1,22 @@
+/* pages/component/mine/information/information.wxss */
+.card{
+  margin-top: 20%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox {
+  display: inline-block;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  margin-right: 10px;
+}

@@ -1,0 +1,31 @@
+<!--pages/detail/detail.wxml-->
+<view class="main">
+  <swiper class="photo" autoplay="false" indicator-dots="true">
+    <swiper-item>
+      <image src="{{item.link}}" />
+    </swiper-item>
+  </swiper>
+
+  <van-panel title="{{item.bookName}}" desc="{{item.seller}}" status="{{item.bookPrice}}元"></van-panel>
+  <van-divider contentPosition="center">详细信息</van-divider>
+  <view class="content">
+    <text>  卖家：{{item.seller}}\n\n</text>
+    <text>  价格：{{item.bookPrice}}元\n\n</text>
+    <text wx:if="{{item.bookCourse}}">课程：{{item.bookCourse}}\n\n</text>
+    <text wx:if="{{item.damage}}">新旧程度：{{item.damage}}\n\n</text>
+    <text wx:if="{{item.loaction==0}}">  地点：本部\n\n</text>
+    <text wx:if="{{item.loaction==1}}">  地点：沙河\n\n</text>
+    <text>  备注：{{item.bookNote}}\n</text>
+  </view> 
+</view>
+<van-goods-action>
+  <van-goods-action-icon
+    class="icon"
+    icon="chat-o"
+    text="聊天"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-button size="small" text="加入收藏"
+    type="warning" bind:click="onClickButton"
+  />
+</van-goods-action>

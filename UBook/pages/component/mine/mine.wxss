@@ -1,0 +1,30 @@
+/* pages/primary/mine/mine.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f9;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500rpx;
+  width: 500rpx;
+  border: 1px solid #e9eaec;
+  border-radius: 30rpx;
+}

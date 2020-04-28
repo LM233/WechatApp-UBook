@@ -1,0 +1,47 @@
+<!--pages/primary/mine/mine.wxml-->
+
+<view class="container">
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  <text class="name">{{userInfo.nickName}}</text>
+
+  <view class="main">
+    <van-cell is-link title="查看资料" size="large" link-type="navigateTo" url="/pages/component/mine/information/information" />
+    <van-divider />
+
+    <van-cell is-link title="设置" link-type="navigateTo" url />
+    <van-divider />
+
+  <van-cell-group>
+
+    <van-cell title="反馈" is-link bind:click="showfeed" />
+    <van-popup show="{{ feed }}" bind:close="closefeed">
+      <view class="us">
+        <van-cell-group>
+        <van-field value="{{ value }}" placeholder="请输入您遇到的问题" border="{{ false }}" />
+</van-cell-group>
+        <van-button round type="info" bind:click>提交</van-button>
+      </view>
+    </van-popup>
+
+    <van-cell title="关于" is-link bind:click="showabout" />
+    <van-popup show="{{ about }}" bind:close="closeabout">
+      <view class="us">
+        <text>开发人员</text>
+        <text>任梦婕</text>
+        <text>袁业浩</text>
+        <text>罗浩冬</text>
+        <text>李兴诚</text>
+      </view>
+    </van-popup>
+
+    <van-cell title="加入我们" is-link bind:click="showjoin" />
+    <van-popup show="{{ join }}" bind:close="closejoin">
+      <view class="us">
+        <text>qq群号</text>
+      </view>
+    </van-popup>
+
+  </van-cell-group>
+  </view>
+
+</view>

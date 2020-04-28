@@ -1,0 +1,46 @@
+/* pages/component/homepage/result/result.wxss */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #5cadff;
+  border:#5cadff 1.5px solid;
+  border-radius: 5px;
+  width:100%;
+}
+
+.main .bar .input {
+  display: flex;
+  flex-direction: row;
+  width:85%;
+}
+
+.main .bar .input van-search{
+  width:100%;
+}
+
+
+.main .result {
+  display: flex;
+  flex-direction: column;
+}
+
+.book{
+  margin-bottom: 5rpx;
+}
+
+.buttons van-button{
+  margin:2.5rpx;
+}
+.jomo{
+  margin-bottom: 15rpx;
+}
+.main1 image{
+  width:100%;
+}

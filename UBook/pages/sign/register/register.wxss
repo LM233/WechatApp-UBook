@@ -1,0 +1,13 @@
+/* pages/sign/register/register.wxss */
+.main{
+  margin:5%;
+  margin-top:10%;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox {
+  display: inline-block;
+}
