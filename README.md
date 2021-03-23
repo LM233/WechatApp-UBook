@@ -4,5 +4,4 @@
 
 ![image](https://github.com/LM233/WechatApp-UBook/blob/master/4.PNG)
 ![image](https://github.com/LM233/WechatApp-UBook/blob/master/1.PNG)
-![image](https://github.com/LM233/WechatApp-UBook/blob/master/2.PNG)
 ![image](https://github.com/LM233/WechatApp-UBook/blob/master/5.PNG)
